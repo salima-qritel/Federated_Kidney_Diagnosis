@@ -141,9 +141,9 @@ This is a brief overview of how the system runs:
 
 ## 🧑‍💻 Author
 
-**Oumaima Toufali**
+**Salima Qritel**
 
-* GitHub: [@OumaimaTF](https://github.com/OumaimaTF)
+* GitHub: [@OumaimaTF](https://github.com/salima-qritel)
   
 
 ---
