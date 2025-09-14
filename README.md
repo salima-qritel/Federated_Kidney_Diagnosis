@@ -143,7 +143,7 @@ This is a brief overview of how the system runs:
 
 **Salima Qritel**
 
-* GitHub: [@OumaimaTF](https://github.com/salima-qritel)
+* GitHub: [@salima-qritel](https://github.com/salima-qritel)
   
 
 ---
