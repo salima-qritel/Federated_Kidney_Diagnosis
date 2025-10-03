@@ -1,21 +1,21 @@
-# Federated Kidney Diagnosis 
+# 🩺 Federated Kidney Diagnosis 
 
-A Federated Learning system for early diagnosis of Chronic Kidney Disease (CKD) using Flower, Docker, Prometheus, and Grafana.
+A federated learning framework for the early detection of Chronic Kidney Disease (CKD), combining Flower, Docker, and a full monitoring stack with Prometheus and Grafana.
 
-## 🚀 Overview
+## 🌍 Overview
 
-This project implements a federated learning architecture to detect chronic kidney disease early using a distributed dataset. It simulates multiple clients (e.g., hospitals or labs) that collaboratively train a model **without sharing raw patient data**.
+This project simulates a federated environment where multiple institutions (e.g., hospitals, laboratories) collaborate to train a predictive model for CKD **without sharing sensitive patient records.**.
 
-Key technologies:
+Core components:
 
-* 🧠 **Flower** (FL framework)
-* 🐍 **Scikit-learn** & **MLPClassifier** for the model
-* 🐳 **Docker** & `docker-compose` for orchestration
-* 📊 **Prometheus & Grafana** for monitoring and visualization
+* 🧠 **Flower** → FL framework
+* 🐍 **Scikit-learn** & **MLPClassifier** → local training
+* 🐳 **Docker** & `docker-compose` → containerization and orchestration
+* 📊 **Prometheus & Grafana** → monitoring pipeline and dashboards
 
 ---
 
-## 📁 Project Structure
+## 📂 Repository Layout
 
 ```
 federated-kidney-diagnosis/
@@ -39,7 +39,7 @@ federated-kidney-diagnosis/
 │   ├── server.py
 |   |── Dockerfile
 │   └── requirements.txt
-├── monitoring/
+├── monitoring/           # Monitoring configuration
 │   ├── prometheus/
 │   │   └── prometheus.yml
 │    
@@ -49,16 +49,17 @@ federated-kidney-diagnosis/
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ Workflow
 
-* **Each client** loads its own version of the CKD dataset and trains a model locally.
-* **The server** coordinates training rounds using **FedAvg** aggregation.
-* **Prometheus** collects metrics from clients and server.
-* **Grafana** visualizes the system's performance and metrics in real-time.
+**Clients:** Each client trains locally on its private CKD dataset.
+
+**Server:** Runs Flower with FedAvg to aggregate model updates.
+
+**Monitoring:** Metrics are pushed to Prometheus and visualized in Grafana dashboards.
 
 ---
 
-## 🧪 Installation & Usage
+## 🛠️ Setup & Execution
 
 ### 1. Clone the repository
 
@@ -67,15 +68,15 @@ git clone https://github.com/OumaimaTF/federated-kidney-diagnosis.git
 cd federated-kidney-diagnosis
 ```
 
-### 2. Build and run the system
+### 2. Launch system
 
 ```bash
 docker-compose up --build
 ```
 
-> All components (server, clients, Prometheus, Grafana) will start in isolated containers.
+> This starts the server, clients, and monitoring stack inside isolated containers.
 
-### 3. Access dashboards
+### 3. Dashboardss
 
 * 📈 Prometheus: [http://localhost:9090](http://localhost:9090)
 * 📋 Grafana: [http://localhost:3000](http://localhost:3000)
@@ -94,12 +95,12 @@ docker-compose up --build
 
 ## 📚 Dataset
 
-Used: [Chronic Kidney Disease Dataset (Kaggle)](https://www.kaggle.com/datasets/rabieelkharoua/chronic-kidney-disease-dataset-analysis/data)
+Dataset used: [Chronic Kidney Disease Dataset (Kaggle)](https://www.kaggle.com/datasets/rabieelkharoua/chronic-kidney-disease-dataset-analysis/data)
 
 ---
 
 
-## 🧭 Execution Plan
+## 🔄 Execution Pipeline
 
 This is a brief overview of how the system runs:
 
@@ -129,7 +130,7 @@ This is a brief overview of how the system runs:
 ---
 
 
-## 🏗️ Built With
+## 🏗️ Tech Stack
 
 * [Flower](https://flower.dev/)
 * [Scikit-learn](https://scikit-learn.org/)
